@@ -246,7 +246,7 @@ results = {
 # Save output to JSON file
 
 
-# output_path = Path("../output/sample-output.json")
+output_path = Path("../output/sample-output.json")
 
 with open("output/sample-output.json", "w", encoding="utf-8") as outfile:
     json.dump(results, outfile, indent=4)
