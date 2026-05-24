@@ -1,0 +1,202 @@
+========================================================
+DIGITAL BANKING TRANSACTION AUDIT LOG 2024
+Generated: 2024-05-24 07:15:00 UTC
+System: NovaBank Secure Monitoring Engine v5.1
+========================================================
+
+TRANSACTION ID: TXN-9001
+--------------------------------------------------------
+Timestamp: 2024-05-24 07:05:22
+Account Holder: Jean Claude Habimana
+Email: jean.habimana@alueducation.com
+Phone: +250-788-222-901
+Transaction Type: International Transfer
+Card Used: 4532-7153-3790-1241
+Amount: $2,450.00
+Destination Website: https://secure.novabank.com/transfers
+Status: FLAGGED
+Risk Level: HIGH
+Processed By: security@alueducation.com
+Description: <p>Transfer temporarily paused for verification</p>
+Tags: #banking #transfer #security #urgent
+
+--------------------------------------------------------
+
+TRANSACTION ID: TXN-9002
+--------------------------------------------------------
+Timestamp: 2024-05-24 08:20:10
+Account Holder: Diane Uwimana
+Email: d.uwimana@alumni.alueducation.com
+Phone: +250 (722) 555-778
+Transaction Type: Tuition Payment
+Card Used: 5425-2334-3010-9903
+Amount: RWF 1,500,000
+Destination Website: https://payments.alueducation.com/tuition
+Status: COMPLETED
+Risk Level: LOW
+Processed By: alumni.finance@alueducation.com
+Description: <div class="success">Payment approved successfully</div>
+Tags: #payment #education #finance
+
+--------------------------------------------------------
+
+TRANSACTION ID: TXN-9003
+--------------------------------------------------------
+Timestamp: 2024-05-24 09:45:00
+Account Holder: Eric Nkurunziza
+Email: e.nkurunziza@si.alueducation.com
+Phone: +250-733-111-222
+Transaction Type: Invoice Settlement
+Card Used: 6011-1111-1111-1117
+Amount: EUR 799.99
+Destination Website: http://billing.novabank.com/invoices
+Status: PROCESSING
+Risk Level: MEDIUM
+Processed By: finance@si.alueducation.com
+Description: <span>Invoice queued for processing</span>
+Tags: #invoice #settlement #processing
+
+--------------------------------------------------------
+
+TRANSACTION ID: TXN-9004
+--------------------------------------------------------
+Timestamp: 2024-05-24 11:30:45
+Account Holder: Sarah Johnson
+Email: sarah.johnson@gmail.com
+Phone: +1-415-555-0199
+Transaction Type: Subscription Renewal
+Card Used: 4111-1111-1111-1111
+Amount: $120.99
+Destination Website: https://subscriptions.novabank.com/renew
+Status: FAILED
+Risk Level: HIGH
+Processed By: support@alueducation.com
+Description: <a href="https://help.novabank.com">Contact Support</a>
+Tags: #subscription #renewal #payment
+
+--------------------------------------------------------
+
+TRANSACTION ID: TXN-9005
+--------------------------------------------------------
+Timestamp: 2024-05-24 13:10:30
+Account Holder: Michael Brown
+Email: michael.brown@yahoo.com
+Phone: 0788123456
+Transaction Type: Refund Request
+Card Used: 5500-0000-0000-0004
+Amount: $89.99
+Destination Website: https://refunds.novabank.com/request
+Status: PENDING
+Risk Level: MEDIUM
+Processed By: helpdesk@alueducation.com
+Description: <p class="info">Refund request submitted for approval</p>
+Tags: #refund #customer-service #banking
+
+========================================================
+INVALID / MALFORMED / HOSTILE DATA SAMPLES
+========================================================
+
+INVALID EMAILS
+--------------------------------------------------------
+wrong@@email.com
+nouserdomain.com
+@missinguser.net
+user@
+admin@.invalid
+fake@domain..com
+test@@si.alueducation.com
+
+INVALID CREDIT CARD NUMBERS
+--------------------------------------------------------
+1234-ABCD-5678-WXYZ
+9999-9999-9999
+4444-4444-4444-444
+11112222333344445555
+card-number-here
+
+INVALID PHONE NUMBERS
+--------------------------------------------------------
+123
++250
+phone-number
+++250788123456
+000-000-000
+
+INVALID URLS
+--------------------------------------------------------
+invalid-url
+htp://wrongprotocol
+https//missingcolon.com
+http:///broken-link
+www.fake-url
+
+========================================================
+SUSPICIOUS / MALICIOUS INPUT TESTS
+========================================================
+
+XSS PAYLOADS
+--------------------------------------------------------
+<script>alert('xss')</script>
+<img src=x onerror=alert('breach')>
+<svg onload=alert('attack')>
+
+SQL INJECTION ATTEMPTS
+--------------------------------------------------------
+DROP TABLE transactions;
+SELECT * FROM users WHERE '1'='1';
+admin' --
+' OR '1'='1
+UNION SELECT credit_card FROM customers;
+
+COMMAND INJECTION ATTEMPTS
+--------------------------------------------------------
+rm -rf /
+sudo reboot
+cat /etc/passwd
+&& shutdown -h now
+
+========================================================
+SECURITY MONITORING LOGS
+========================================================
+
+[07:10:00] INFO Login success: admin@alueducation.com
+[07:15:22] INFO Transaction approved: 4111-1111-1111-1111
+[08:00:00] WARN Multiple failed logins from: 192.168.0.45
+[08:20:45] INFO Alumni access: finance@alumni.alueducation.com
+[09:30:10] ERROR Invalid transaction card: 9999-9999-9999-9999
+[10:00:00] ALERT Suspicious SQL payload detected
+[11:45:00] INFO SI account login: security@si.alueducation.com
+[12:10:00] WARN Potential XSS attack blocked
+[13:00:00] ERROR Unauthorized API request attempt
+
+========================================================
+ADDITIONAL DATA SAMPLES
+========================================================
+
+Scheduled Processing Times:
+08:30 AM
+11:45 PM
+22:15
+06:05
+
+Currency Values:
+$4,999.99
+EUR 1,250.00
+RWF 850,000
+£999.50
+
+HTML Fragments:
+<div class="notice">Processing request</div>
+<p>Transaction completed successfully</p>
+<a href="https://www.novabank.com">NovaBank Portal</a>
+
+Tracking Tags:
+#Banking
+#CyberSecurity
+#Finance
+#FraudDetection
+#ALU
+#Transactions
+
+END OF AUDIT EXPORT
+========================================================
