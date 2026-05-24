@@ -1,0 +1,168 @@
+{
+    "summary": {
+        "total_valid_emails": 13,
+        "total_alu_official_emails": 6,
+        "total_alu_alumni_emails": 2,
+        "total_alu_si_emails": 3,
+        "total_credit_cards": 6,
+        "total_phone_numbers": 4,
+        "total_urls": 8,
+        "total_hashtags": 18,
+        "total_currency_amounts": 9
+    },
+    "valid_data": {
+        "emails": [
+            "jean.habimana@alueducation.com",
+            "security@alueducation.com",
+            "d.uwimana@alumni.alueducation.com",
+            "alumni.finance@alueducation.com",
+            "e.nkurunziza@si.alueducation.com",
+            "finance@si.alueducation.com",
+            "sarah.johnson@gmail.com",
+            "support@alueducation.com",
+            "michael.brown@yahoo.com",
+            "helpdesk@alueducation.com",
+            "admin@alueducation.com",
+            "finance@alumni.alueducation.com",
+            "security@si.alueducation.com"
+        ],
+        "alu_specific_emails": {
+            "official": [
+                "jean.habimana@alueducation.com",
+                "security@alueducation.com",
+                "alumni.finance@alueducation.com",
+                "support@alueducation.com",
+                "helpdesk@alueducation.com",
+                "admin@alueducation.com"
+            ],
+            "alumni": [
+                "d.uwimana@alumni.alueducation.com",
+                "finance@alumni.alueducation.com"
+            ],
+            "si": [
+                "e.nkurunziza@si.alueducation.com",
+                "finance@si.alueducation.com",
+                "security@si.alueducation.com"
+            ]
+        },
+        "credit_cards_masked": [
+            "************1241",
+            "************9903",
+            "************1117",
+            "************1111",
+            "************0004",
+            "************9999"
+        ],
+        "phone_numbers": [
+            "250-788-222-901",
+            "250-733-111-222",
+            "415-555-0199",
+            "000-000-000"
+        ],
+        "urls": [
+            "https://secure.novabank.com/transfers",
+            "https://payments.alueducation.com/tuition",
+            "http://billing.novabank.com/invoices",
+            "https://subscriptions.novabank.com/renew",
+            "https://help.novabank.com",
+            "https://refunds.novabank.com/request",
+            "http:///broken-link",
+            "https://www.novabank.com"
+        ],
+        "hashtags": [
+            "#education",
+            "#refund",
+            "#payment",
+            "#urgent",
+            "#transfer",
+            "#finance",
+            "#alu",
+            "#transactions",
+            "#frauddetection",
+            "#renewal",
+            "#invoice",
+            "#customer",
+            "#subscription",
+            "#settlement",
+            "#banking",
+            "#security",
+            "#processing",
+            "#cybersecurity"
+        ],
+        "currency_amounts": [
+            "$2,450.00",
+            "RWF 1,500,000",
+            "EUR 799.99",
+            "$120.99",
+            "$89.99",
+            "$4,999.99",
+            "EUR 1,250.00",
+            "RWF 850,000",
+            "\u00a3999.50"
+        ]
+    },
+    "security_analysis": {
+        "malicious_content_detected": {
+            "xss_attempts": [
+                "<script>alert('xss')</script>",
+                "<img src=x onerror=alert('breach')>",
+                "<svg onload=alert('attack')>"
+            ],
+            "sql_injection_attempts": [
+                "DROP TABLE",
+                "SELECT *",
+                "UNION SELECT",
+                "' OR '1'='1",
+                "admin' --"
+            ],
+            "command_injection_attempts": [
+                "rm -rf /",
+                "sudo reboot",
+                "shutdown",
+                "cat /etc/passwd"
+            ]
+        },
+        "invalid_or_malformed_entries": {
+            "invalid_emails": [
+                "jean.habimana@",
+                "security@",
+                "d.uwimana@",
+                "alumni.finance@",
+                "e.nkurunziza@",
+                "finance@",
+                "sarah.johnson@",
+                "support@",
+                "michael.brown@",
+                "helpdesk@",
+                "wrong@@email.com",
+                "admin@.invalid",
+                "fake@",
+                "domain..com",
+                "test@@si.alueducation.com",
+                "admin@"
+            ],
+            "invalid_credit_cards": [
+                "7153-3790-1241",
+                "2334-3010-9903",
+                "1111-1111-1117",
+                "1111-1111-1111",
+                "0000-0000-0004",
+                "1234-ABCD-5678-WXYZ",
+                "9999-9999-9999",
+                "4444-4444-4444",
+                "11112222333344445555"
+            ],
+            "invalid_phone_numbers": [
+                "123",
+                "000-000-000"
+            ],
+            "invalid_urls": [
+                "htp://wrongprotocol",
+                "https//missingcolon.com",
+                "http:///broken-link",
+                "www.fake-url",
+                "www.novabank.com\">NovaBank"
+            ]
+        }
+    }
+}
